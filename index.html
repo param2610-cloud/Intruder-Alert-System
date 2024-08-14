@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intruder History Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="gradient-container">
+    <div class="blur-layer">
+    </div>
+    <div class="absolute flex flex-col gap-8 top-0 right-0 left-0 bottom-0 bg-transparent w-screen min-h-screen p-10">
+        <div class="flex gap-4 w-screen justify-start items-center">
+            <img src="assets/intruder.webp" alt="" class="w-[10vw] border-[10px] border-gray-200">
+            <div class="text-[4vw] font-bold text-white flex-grow">
+                Intruder Alert History 
+            </div>
+        </div>
+        <div class="flex-grow flex flex-col text-white text-xl">
+            <table class="min-w-full border-collapse">
+              <thead>
+                <tr>
+                  <th class="border px-4 py-2">ID</th>
+                  <th class="border px-4 py-2">Date</th>
+                  <th class="border px-4 py-2">Time</th>
+                  <th class="border px-4 py-2">Message</th>
+                </tr>
+              </thead>
+              <tbody id="data-table-tbody">
+                <tr>
+                  <td class="border px-4 py-2">1</td>
+                  <td class="border px-4 py-2">2024-08-15</td>
+                  <td class="border px-4 py-2">10:00 AM</td>
+                  <td class="border px-4 py-2">This is a sample message</td>
+                </tr>
+                <tr>
+                  <td class="border px-4 py-2">2</td>
+                  <td class="border px-4 py-2">2024-08-15</td>
+                  <td class="border px-4 py-2">10:15 AM</td>
+                  <td class="border px-4 py-2">Another sample message</td>
+                </tr>
+                <!-- Add more rows as needed -->
+              </tbody>
+            </table>
+          </div>
+          
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>

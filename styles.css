@@ -1,0 +1,40 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+.gradient-container {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        36deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(8, 8, 121, 1) 40%,
+        rgba(58, 0, 99, 1) 100%
+    );
+    background-size: 200% 200%;
+    animation: gradientMove 20s linear infinite;
+    position: relative;
+}
+
+.blur-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scaleY(-1); /* Mirror vertically */
+    backdrop-filter: blur(10px); /* Apply blur */
+    opacity: 0.1; /* Apply blur to the background */
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
