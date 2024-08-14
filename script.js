@@ -1,6 +1,6 @@
 async function populateTable() {
     try {
-        const response = await fetch('http://localhost:3000/api/history');
+        const response = await fetch('https://intruder-alert-system.onrender.com/api/history');
         console.log(response)
         const data = await response.json();
         const tbody = document.getElementById('data-table-tbody');

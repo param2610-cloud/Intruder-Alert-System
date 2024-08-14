@@ -5,9 +5,8 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-const allowedOrigins = ['http://192.168.0.158:5500'];
+const allowedOrigins = ['http://192.168.0.158:5500',"https://param2610-cloud.github.io/"];
 
-// CORS configuration
 const corsOptions = {
     origin: (origin, callback) => {
         if (allowedOrigins.includes(origin) || !origin) {
@@ -18,10 +17,8 @@ const corsOptions = {
     },
 };
 
-// Enable CORS with specified options
 app.use(cors(corsOptions));
 
-// MongoDB connection URI
 const uri = 'mongodb+srv://shareallmedia69:LOdPb5Hm46gGhMv9@cluster.pa042.mongodb.net/?retryWrites=true&w=majority&appName=Cluster';
 const dbName = 'intruderHistory';
 const collectionName = 'History';
