@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-const allowedOrigins = ['http://192.168.0.158:5500',"https://param2610-cloud.github.io/"];
+const allowedOrigins = ['http://192.168.0.158:5500',"https://param2610-cloud.github.io/Intruder-Alert-System/"];
 
 const corsOptions = {
     origin: (origin, callback) => {
