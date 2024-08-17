@@ -6,7 +6,7 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-const allowedOrigins = ['http://192.168.0.158:5500',"https://param2610-cloud.github.io/"];
+const allowedOrigins = ['http://192.168.0.158:5500',"https://param2610-cloud.github.io/","http://0.0.0.0:000"];
 
 const corsOptions = {
     origin: (origin, callback) => {
@@ -18,7 +18,10 @@ const corsOptions = {
     },
 };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
+app.use(cors({
+    origin: '*', // This allows all origins
+  }));
 
 const TELEGRAM_BOT_TOKEN = '7530722949:AAGsOlEpzHHyTFqtZqp2Di16yQRAg0CSiB4'
 const TELEGRAM_CHAT_ID = '1872460442'
