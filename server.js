@@ -24,7 +24,7 @@ app.use(cors({
   }));
 
 const TELEGRAM_BOT_TOKEN = '7530722949:AAGsOlEpzHHyTFqtZqp2Di16yQRAg0CSiB4'
-const TELEGRAM_CHAT_ID = '1872460442'
+const TELEGRAM_CHAT_ID = '-4574987811'
 const TELEGRAM_API_URL = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`
 const uri = 'mongodb+srv://shareallmedia69:LOdPb5Hm46gGhMv9@cluster.pa042.mongodb.net/?retryWrites=true&w=majority&appName=Cluster';
 const dbName = 'intruderHistory';
