@@ -18,10 +18,10 @@ const corsOptions = {
     },
 };
 
-app.use(cors(corsOptions));
-// app.use(cors({
-//     origin: '*', // This allows all origins
-//   }));
+// app.use(cors(corsOptions));
+app.use(cors({
+    origin: '*', // This allows all origins
+  }));
 
 const TELEGRAM_BOT_TOKEN = '7530722949:AAGsOlEpzHHyTFqtZqp2Di16yQRAg0CSiB4'
 const TELEGRAM_CHAT_ID = '1872460442'
