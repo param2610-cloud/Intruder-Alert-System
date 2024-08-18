@@ -51,8 +51,8 @@ app.get('/api/history', async (req, res) => {
 
 app.post('/api/intruder-alert', async (req, res) => {
     // const timestamp = Date.now();
-    const normalized = new Date();
-    const indiaTime = moment(normalized).tz("Asia/Calcutta");
+    const currentTime = new Date();
+    const indiaTime = moment(currentTime).tz("Asia/Kolkata");
     const timestamp = indiaTime.valueOf();
     const message = `Intruder alert detected at ${new Date(timestamp).toLocaleString()}`;
 
