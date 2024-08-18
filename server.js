@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const { MongoClient } = require('mongodb');
 const cors = require('cors');
+const moment = require('moment-timezone');
 
 const app = express();
 const port = 3000;
@@ -49,7 +50,10 @@ app.get('/api/history', async (req, res) => {
 });
 
 app.post('/api/intruder-alert', async (req, res) => {
-    const timestamp = Date.now();
+    // const timestamp = Date.now();
+    const normalized = new Date();
+    const indiaTime = moment(normalized).tz("Asia/Calcutta");
+    const timestamp = indiaTime.valueOf();
     const message = `Intruder alert detected at ${new Date(timestamp).toLocaleString()}`;
 
     try {
