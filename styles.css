@@ -3,20 +3,28 @@ html {
     height: 100%;
     margin: 0;
     overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0d0d0d; /* A fallback background */
 }
 
 .gradient-container {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-        36deg,
-        rgba(2, 0, 36, 1) 0%,
-        rgba(8, 8, 121, 1) 40%,
-        rgba(58, 0, 99, 1) 100%
+        115deg,
+        #06033f 10%,
+        #350a41 40%,
+        #440929 70%,
+        #210c4e 100%
     );
     background-size: 200% 200%;
-    animation: gradientMove 20s linear infinite;
+    animation: gradientMove 8s ease-in-out infinite; /* Reduced duration for faster animation */
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .blur-layer {
@@ -25,16 +33,19 @@ html {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: scaleY(-1); /* Mirror vertically */
-    backdrop-filter: blur(10px); /* Apply blur */
-    opacity: 0.1; /* Apply blur to the background */
+    backdrop-filter: blur(20px); /* Apply a stronger blur */
+    opacity: 0.2; /* Increased opacity for a more pronounced effect */
+    pointer-events: none; /* Ensure the blur layer doesn't interfere with interactions */
 }
 
 @keyframes gradientMove {
     0% {
         background-position: 0% 50%;
     }
-    100% {
+    50% {
         background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }

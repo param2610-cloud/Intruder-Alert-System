@@ -1,5 +1,6 @@
 from machine import Pin
 import time
+import urequest as rq
 
 
 
@@ -19,6 +20,8 @@ try:
         
         if motion_sensor.value() == 1:
             print("Motion detected!")
+            
+            rq.post("https://intruder-alert-system.onrender.com/api/intruder-alert")
             alert_system(1)  
             time.sleep(2)  
         else:
