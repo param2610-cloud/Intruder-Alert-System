@@ -53,7 +53,7 @@ app.post('/api/intruder-alert', async (req, res) => {
     // const timestamp = Date.now();
     const date = new Date();
     const timestamp = date.toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
-    const message = `Intruder alert detected at ${new Date(timestamp).toLocaleString()}`;
+    const message = `Intruder Motion detected at ${new Date(timestamp).toLocaleString()}`;
 
     try {
         await client.connect();
